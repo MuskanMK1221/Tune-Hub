@@ -43,11 +43,11 @@ public class PaymentController {
 
 			order = razorpay.orders.create(orderRequest);
 
-			String mail =  (String) session.getAttribute("email");
+			//String mail =  (String) session.getAttribute("email");
 
-			Users u = service.getUser(mail);
-			u.setPremium(true);
-			service.updateUser(u);
+			//Users u = service.getUser(mail);
+			//u.setPremium(true);
+			//service.updateUser(u);
 
 		} catch (RazorpayException e) {
 			e.printStackTrace();
@@ -55,5 +55,6 @@ public class PaymentController {
 		finally {
 			return order.toString();
 		}
-	}	
+	}
+	
 }
